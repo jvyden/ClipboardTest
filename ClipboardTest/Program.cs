@@ -11,7 +11,12 @@ ThrowIfSdlError();
 if (SDL3.SDL_HasClipboardText())
     Console.WriteLine("\tClipboard text: " + SDL3.SDL_GetClipboardText());
 
+Console.WriteLine("\tPrimary selection: " + SDL3.SDL_GetPrimarySelectionText());
+
 Console.WriteLine($"Clipboard has image/png data? {(bool)SDL3.SDL_HasClipboardData("image/png")}");
+ThrowIfSdlError();
+
+Console.WriteLine($"Clipboard has text/uri-list data? {(bool)SDL3.SDL_HasClipboardData("text/uri-list")}");
 ThrowIfSdlError();
 
 Console.WriteLine("Setting clipboard data...");
