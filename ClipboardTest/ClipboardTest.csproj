@@ -9,7 +9,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="ppy.SDL3-CS" Version="2025.703.0" />
+      <PackageReference Include="ppy.SDL3-CS" Version="2025.703.0">
+          <ExcludeAssets>
+              native
+          </ExcludeAssets>
+      </PackageReference>
     </ItemGroup>
 
 </Project>
